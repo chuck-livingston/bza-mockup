@@ -42,6 +42,10 @@ body {
   padding: 0 1.25rem;
 }
 
+main.wrap {
+  padding-bottom: 3rem;
+}
+
 /* Skip link: hidden until focused, for keyboard users */
 .skip-link {
   position: absolute;
@@ -222,6 +226,12 @@ a:visited { color: #5a3a72; }
   margin: 0 0 0.75rem;
 }
 .none { color: var(--ink-soft); font-style: italic; }
+.item-note {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: -0.25rem 0 0.75rem;
+}
 
 .minutes-list {
   margin: 0;
@@ -267,8 +277,9 @@ a:visited { color: #5a3a72; }
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 0.9rem;
 }
@@ -284,6 +295,21 @@ a:visited { color: #5a3a72; }
 }
 .doc-links a:hover,
 .doc-links a:focus-visible { border-color: var(--accent); background: #eaf1f4; }
+.doc-links .doc-empty {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px dashed var(--line);
+  border-radius: 0.2rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.doc-sub {
+  font-style: italic;
+  font-size: 0.85em;
+  color: var(--ink-soft);
+}
 
 .petition-featured {
   border-left-color: var(--live);
